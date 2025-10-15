@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        nav{
+            width: 100%;
+            height: 20vh;
+            background-color: rgba(0, 0, 0, 0.675);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10%;
+            padding: 10px;
+        }
+        nav .search{
+            width: 50%;
+            height: 20%;
+            display: flex;
+            background-color: rgb(237, 241, 241);
+            justify-content: center;
+            align-items: center;
+        }
+        .search input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 0px 5px;
+        }
+        .search input::placeholder{
+            font-size: medium;
+        }
+        .search>i{
+            width: 5%;
+            color: black;
+            background-color: orange;
+            height: 100%;
+            border: 1px solid rgb(123, 83, 9);
+            font-size: medium;
+            border-radius: 0%;
+            padding:5px;
+            margin: none;
+        }
+        .search i:hover{
+            width: 5%;
+            color: black;
+            background-color: orange;
+            height: 90%;
+            border: none;
+            font-size: medium;
+            padding: 5px 5px;
+            border-radius: 50%;
+        }
+        .tags{
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .tags a{
+            text-decoration: none;
+            color: white;
+            font-size: larger;
+            padding: 5px;
+        }
+        .tags a:hover{
+            background-color: gray;
+            border-radius: 20px;
+        }
+        i{
+            color: rgb(240, 240, 248);
+        }
+        .social{
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .social a{
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            font-size: larger;
+        }
+        .social a:hover{
+            background-color: gray;
+            border-radius: 20px;
+        }
+        .fa-youtube{
+            background-color: red;
+        }
+        .fa-facebook{
+            background-color: blue;
+        }
+        .fa-square-instagram{
+            background: linear-gradient(45deg,#feda75 0%,#fa7e1e 30%,#d62976 60%,#962fbf 80%,#4f5bd5 100%);;
+        }
+        .fa-spotify{
+            background-color: green;
+        }
+        .fa-house{
+            background-color: rgb(9, 146, 237);
+        }
+        .fa-envelope{
+            background: linear-gradient(45deg, #d93025, #fbbc05);
+        }
+        .fa-file{
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+        }
+        .fa-image{
+            background-color: #962fbf;
+        }
+        .fa-google-drive{
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+        }
+        .fa-google-play{
+            background: linear-gradient(135deg, #34a853, #4285f4);
+        }
+        .fa-circle-user{
+            background-color: rgb(246, 161, 15);
+        }
+        .fa-square-x-twitter{
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+        .body{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(248, 58, 58, 0.436),rgba(239, 189, 94, 0.485),rgba(242, 242, 117, 0.529),rgba(92, 238, 92, 0.54),rgba(81, 189, 231, 0.54),rgba(113, 113, 247, 0.501),rgba(245, 101, 245, 0.468),rgba(246, 169, 182, 0.556),rgba(246, 57, 95, 0.447));
+        }
+        footer{
+            width: 100%;
+            background-color: rgba(165, 42, 42, 0.521);
+            padding: 50px;
+
+        }
+        footer h1{
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+        footer .comment{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .comment .commentcon{
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .contact{
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+        }
+        .fa-star,.fa-star-half-stroke,.fa-face-smile{
+            color: #fbbd05d8;
+        }
+        .fa-comment{
+            color: #002a5e;
+        }
+        .fa-address-card{
+            background-color: #34a853;
+        }
+        .fa-location-dot{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="search">
+            <i class="fa-solid fa-g"></i>
+            <input type="text" placeholder="Search Google or Type a URL"/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="tags">
+            <a href="own.html" target="_self"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="https://mail.google.com/mail/u/0/" target="_blank"><i class="fa-solid fa-envelope"></i> Gmail</a>
+            <a href="https://files.google.com/" target="_blank"><i class="fa-solid fa-file"></i> Files</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-image"></i> Pictures</a>
+            <a href="https://drive.google.com/" target="_blank"><i class="fa-brands fa-google-drive"></i> Drive</a>
+            <a href="https://play.google.com/" target="_blank"><i class="fa-brands fa-google-play"></i> Play store</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-circle-user"></i> User</a>
+        </div>
+        <div class="social">
+            <a href="https://www.youtube.com/" target="yt"><i class="fa-brands fa-youtube"></i> Youtube</a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i> X</a>
+            <a href="https://open.spotify.com/" target="_blank"><i class="fa-brands fa-spotify"></i> Spotify</a>
+        </div>
+    </nav>
+    <div class="body">    </div>
+    <footer>
+        <h1>Thank you</h1>
+        <div class="comment">
+            <div class="commentcon">
+                <p><i class="fa-regular fa-comment"></i> Comment</p>
+                <p><i class="fa-solid fa-face-smile"></i> Review</p>
+                <p>Rating :</p>
+                <div class="rt">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+            <div class="contact">
+                <em>Musharaf.Syed</em>
+                <em><i class="fa-solid fa-envelope"></i> syedmusharaf22441@gmail.com</em>
+                <em><i class="fa-solid fa-address-card"></i> 9391510110</em>
+                <em><i class="fa-solid fa-location-dot"></i> Hyderabad,madhapur</em>
+                <em>Telangana-500081</em>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
